@@ -19,8 +19,35 @@ const spans = document.querySelectorAll("#play span");
 console.log(spans);
 
 for (const mySpan of spans){
-    mySpan.style.backgroundColor = "yellow";
+    //mySpan.style.backgroundColor = "yellow";
     let actor = mySpan.dataset.actor;
-    alert(actor);
+    mySpan.addEventListener("click", function(ev){
+        
+        //loop elements and pass in current actor
+        highlightActor(actor);
+    });
+}
 
-};
+//highlight current actor
+function highlightActor(actor) {
+   
+    //loop all spans
+    for (const mySpan of spans){
+        if (actor == mySpan.dataset.actor) {
+            mySpan.style.backgroundColor = "yellow";
+        } else {
+            mySpan.style.backgroundColor = "white";        
+        }
+    }
+}
+
+function highlight(el) {
+   let currentBg = el.style.backgroundColor;
+  
+   // Catch the empty string state on the first click
+   if (currentBg === "" || currentBg === "white") {
+       el.style.backgroundColor = "yellow";
+   } else {
+       el.style.backgroundColor = "white";
+   }
+}
