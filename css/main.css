@@ -111,3 +111,28 @@ footer {
     }
     
 }
+
+#description {
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 20px 24px;
+    
+    background-color: #ffffff;
+    border-left: 5px solid #ffd700;
+    border-radius: 4px;
+}
+ #play pre {
+    white-space: pre-wrap;       
+    word-wrap: break-word; 
+    font-weight: bold;    
+    
+    
+    padding: 0 24px;             
+    margin: 20px 0;              
+    
+    box-sizing: border-box;      
+    
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95rem;
+    color: #444444;
+}
